@@ -3,7 +3,8 @@ package com.tiMorpheus.task1;
 public class Task1 {
 
     // -- BYTE
-    public int countByte() {
+    public static int countByte() {
+
         return amountOfBites((byte) 1);
     }
 
@@ -13,11 +14,11 @@ public class Task1 {
      * @param value - 1
      * @return - number of bits in type Byte
      */
-    private int amountOfBites(byte value) {
+    private static int amountOfBites(byte value) {
         value = (byte) (value << 1);
 
         if (value < 0) {
-            return 2;
+            return 1;
         } else
             return amountOfBites(value) + 1;
     }
@@ -76,7 +77,7 @@ public class Task1 {
      * @return - number of bits in type Long
      */
     private int amountOfBites(long value) {
-        value = (value << 1);
+        value = value << 1;
 
         if (value < 0) {
             return 2;
