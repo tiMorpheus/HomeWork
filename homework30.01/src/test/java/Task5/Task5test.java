@@ -19,7 +19,10 @@ public class Task5test {
 
         String cipherText = rsa.encrypt(text);
 
+        System.out.println(text);
+        System.out.println(cipherText);
         assertNotEquals(cipherText, text);
+
     }
 
 
@@ -28,8 +31,10 @@ public class Task5test {
     public void decryptStringTest() {
 
         String cipherString = rsa.encrypt(text);
-
-        assertEquals(rsa.decrypt(cipherString), text);
+        String plaintext = rsa.decrypt(cipherString);
+        System.out.println(cipherString);
+        System.out.println(plaintext);
+        assertEquals(plaintext, text);
     }
 
 
