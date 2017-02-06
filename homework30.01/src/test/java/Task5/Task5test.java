@@ -1,6 +1,6 @@
 package Task5;
 
-import com.tiMorpheus.task5.Task5;
+import com.timorpheus.task5.Task5;
 
 import org.junit.Test;
 
@@ -12,8 +12,6 @@ public class Task5test {
     Task5 rsa = new Task5(1024);
     String text = "Some text to encrypt or decrypt";
 
-
-
     @Test
     public void encryptStringTest() {
 
@@ -24,8 +22,6 @@ public class Task5test {
         assertNotEquals(cipherText, text);
 
     }
-
-
 
     @Test
     public void decryptStringTest() {

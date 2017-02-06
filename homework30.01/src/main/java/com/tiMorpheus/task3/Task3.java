@@ -1,7 +1,9 @@
-package com.tiMorpheus.task3;
+package com.timorpheus.task3;
 
-public class Task3 {
+public final class Task3 {
 
+    private Task3() {
+    }
 
     public static long karatsubaMultiplication(long i, long j) {
         if (i < 10 || j < 10) {

@@ -1,6 +1,6 @@
 package Task4;
 
-import com.tiMorpheus.task4.Task4;
+import com.timorpheus.task4.Task4;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

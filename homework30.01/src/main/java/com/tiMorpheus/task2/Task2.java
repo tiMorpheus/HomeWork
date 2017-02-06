@@ -1,4 +1,4 @@
-package com.tiMorpheus.task2;
+package com.timorpheus.task2;
 
 public class Task2 {
 

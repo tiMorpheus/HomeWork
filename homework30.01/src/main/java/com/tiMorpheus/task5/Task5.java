@@ -1,11 +1,13 @@
-package com.tiMorpheus.task5;
+package com.timorpheus.task5;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
 
 public class Task5 {
 
-        private BigInteger n, d, e;
+        private BigInteger n;
+        private BigInteger d;
+        private BigInteger e;
 
         private int bitlen = 1024;
 
