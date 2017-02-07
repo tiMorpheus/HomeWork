@@ -1,36 +1,52 @@
 package Task5;
 
-import com.timorpheus.task5.Task5;
-
+import com.timorpheus.task5.RSA;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.math.BigInteger;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class Task5test {
 
-    Task5 rsa = new Task5(1024);
-    String text = "Some text to encrypt or decrypt";
+    RSA serverRsa;
+    RSA clientRsa;
+    BigInteger encryptMessage;
+    BigInteger message = new BigInteger("Hello java world".getBytes());
+
+    @Before
+    public void init() throws Exception {
+
+        int N = 1024;           //amount of bits to key generating
+
+        serverRsa = new RSA();
+        clientRsa = new RSA();
+
+        serverRsa.init(N);
+
+        clientRsa.setModulus(serverRsa.getModulus());
+        clientRsa.setPublicKey(serverRsa.getPublicKey());
+
+        encryptMessage = clientRsa.encrypt(message);
+    }
 
     @Test
-    public void encryptStringTest() {
+    public void clientEncryptTest() {
 
-        String cipherText = rsa.encrypt(text);
 
-        System.out.println(text);
-        System.out.println(cipherText);
-        assertNotEquals(cipherText, text);
-
+        assertNotEquals(encryptMessage, message);
     }
 
     @Test
     public void decryptStringTest() {
 
-        String cipherString = rsa.encrypt(text);
-        String plaintext = rsa.decrypt(cipherString);
-        System.out.println(cipherString);
-        System.out.println(plaintext);
-        assertEquals(plaintext, text);
+        BigInteger decryptMessage = serverRsa.decrypt(encryptMessage);
+
+        assertEquals(decryptMessage, new BigInteger("Hello java world".getBytes()));
+
+
     }
 
 

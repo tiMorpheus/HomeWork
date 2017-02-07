@@ -1,8 +1,8 @@
 package com.timorpheus.task3;
 
-public final class Task3 {
+public final class Karatzuba {
 
-    private Task3() {
+    private Karatzuba() {
     }
 
     public static long karatsubaMultiplication(long i, long j) {

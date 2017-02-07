@@ -1,6 +1,6 @@
 package com.timorpheus.task4;
 
-public class Task4 {
+public class Evklid {
 
     public int nod(int c, int d) {
         int a = c;

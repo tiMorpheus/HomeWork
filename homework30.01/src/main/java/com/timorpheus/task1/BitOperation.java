@@ -1,6 +1,6 @@
 package com.timorpheus.task1;
 
-public class Task1 {
+public class BitOperation {
 
 
     public int countByte() {

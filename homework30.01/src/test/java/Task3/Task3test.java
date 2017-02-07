@@ -1,8 +1,8 @@
 package Task3;
 
-import com.timorpheus.task3.Task3;
 import org.junit.Test;
 
+import static com.timorpheus.task3.Karatzuba.karatsubaMultiplication;
 import static org.junit.Assert.assertEquals;
 
 public class Task3test {
@@ -13,7 +13,7 @@ public class Task3test {
         long first = 56112111,
                 second = 12611;
 
-        assertEquals(new Task3().karatsubaMultiplication(first, second), first * second);
+        assertEquals(karatsubaMultiplication(first, second), first * second);
     }
 
 
