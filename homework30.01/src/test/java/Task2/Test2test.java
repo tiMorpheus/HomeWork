@@ -8,22 +8,17 @@ import static org.junit.Assert.assertEquals;
 
 public class Test2test {
 
-    @Test
-    public void exceptionTesting() {
+    @Test(expected = IllegalArgumentException.class)
+    public void inncorectPositionChangingTest() {
 
-        int number = 5555; //1010110110011
 
-        try {
-            new ChangeBit().changeBit(33, 0, number);
-        } catch (IllegalArgumentException e) {
-            assertEquals("bit position not available", e.getMessage());
-        }
 
-        try {
-            new ChangeBit().changeBit(32, 3, number);
-        } catch (IllegalArgumentException e) {
-            assertEquals("value of bit to change not available", e.getMessage());
-        }
+        new ChangeBit().changeBit(33, 0, 5555);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void incorrectValueOfBitTest(){
+        new ChangeBit().changeBit(32, 3, 5555);
     }
 
     @Test

@@ -2,6 +2,7 @@ package com.timorpheus.task5;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.util.IllegalFormatException;
 
 public class RSA {
     private final static BigInteger one = new BigInteger("1");
@@ -11,18 +12,14 @@ public class RSA {
     private BigInteger publicKey;
     private BigInteger modulus;
 
-    public void init(int N) {
-        BigInteger p = BigInteger.probablePrime(N / 2, random);
-        BigInteger q = BigInteger.probablePrime(N / 2, random);
+    public void init(int bitNumber) {
+        BigInteger p = BigInteger.probablePrime(bitNumber / 2, random);
+        BigInteger q = BigInteger.probablePrime(bitNumber / 2, random);
         BigInteger phi = (p.subtract(one)).multiply(q.subtract(one));
 
         modulus = p.multiply(q);
 
         privateKey = publicKey.modInverse(phi);
-    }
-
-    public void setPrivateKey(BigInteger privateKey) {
-        this.privateKey = privateKey;
     }
 
     public void setPublicKey(BigInteger publicKey) {
@@ -31,10 +28,6 @@ public class RSA {
 
     public void setModulus(BigInteger modulus) {
         this.modulus = modulus;
-    }
-
-    public BigInteger getPrivateKey() {
-        return privateKey;
     }
 
     public BigInteger getPublicKey() {
@@ -50,12 +43,21 @@ public class RSA {
         publicKey = new BigInteger("65537");     // common value in practice = 2^16 + 1
     }
 
-    public BigInteger encrypt(BigInteger message) {
-        return message.modPow(publicKey, modulus);
+    public BigInteger encrypt(BigInteger message) throws NullPointerException {
+        if (message instanceof BigInteger) {
+            return message.modPow(publicKey, modulus);
+        } else {
+            throw new NullPointerException("Null");
+        }
     }
 
-    public BigInteger decrypt(BigInteger encrypted) {
-        return encrypted.modPow(privateKey, modulus);
+    public BigInteger decrypt(BigInteger encrypted) throws NullPointerException {
+        if (encrypted instanceof BigInteger){
+            return encrypted.modPow(privateKey, modulus);
+        } else {
+            throw new NullPointerException("Null");
+        }
+
     }
 
 }
