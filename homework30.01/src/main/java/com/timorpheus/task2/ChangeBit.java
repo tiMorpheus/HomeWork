@@ -1,15 +1,17 @@
 package com.timorpheus.task2;
 
-public class ChangeBit {
+public final class ChangeBit {
 
-    public int changeBit(int pos, int valueOfBit, int number) {
+    private ChangeBit() {
+    }
+
+    public static int changeBit(int pos, int valueOfBit, int number) {
 
         if (pos > 32 || pos <= 0) {
             throw new IllegalArgumentException("bit position not available");
         } else if (valueOfBit < 0 || valueOfBit > 1) {
             throw new IllegalArgumentException("value of bit to change not available");
         }
-
 
 
         if (valueOfBit == 0) {

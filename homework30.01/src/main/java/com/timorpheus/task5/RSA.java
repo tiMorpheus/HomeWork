@@ -2,7 +2,6 @@ package com.timorpheus.task5;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
-import java.util.IllegalFormatException;
 
 public class RSA {
     private final static BigInteger one = new BigInteger("1");
@@ -11,8 +10,15 @@ public class RSA {
     private BigInteger privateKey;
     private BigInteger publicKey;
     private BigInteger modulus;
+    private final static int bitNumber = 1024;
 
-    public void init(int bitNumber) {
+    // generate an N-bit (roughly) public and private key
+    public RSA() {
+        publicKey = new BigInteger("65537");
+        init();
+    }
+
+    private void init() {
         BigInteger p = BigInteger.probablePrime(bitNumber / 2, random);
         BigInteger q = BigInteger.probablePrime(bitNumber / 2, random);
         BigInteger phi = (p.subtract(one)).multiply(q.subtract(one));
@@ -20,6 +26,14 @@ public class RSA {
         modulus = p.multiply(q);
 
         privateKey = publicKey.modInverse(phi);
+    }
+
+    public BigInteger getPrivateKey() {
+        return privateKey;
+    }
+
+    public void setPrivateKey(BigInteger privateKey) {
+        this.privateKey = privateKey;
     }
 
     public void setPublicKey(BigInteger publicKey) {
@@ -38,24 +52,21 @@ public class RSA {
         return modulus;
     }
 
-    // generate an N-bit (roughly) public and private key
-    public RSA() {
-        publicKey = new BigInteger("65537");     // common value in practice = 2^16 + 1
-    }
-
     public BigInteger encrypt(BigInteger message) throws NullPointerException {
-        if (message instanceof BigInteger) {
-            return message.modPow(publicKey, modulus);
+
+        if (message == null) {
+            throw new IllegalArgumentException("No message to encrypt!!!");
         } else {
-            throw new NullPointerException("Null");
+            return message.modPow(publicKey, modulus);
         }
     }
 
     public BigInteger decrypt(BigInteger encrypted) throws NullPointerException {
-        if (encrypted instanceof BigInteger){
-            return encrypted.modPow(privateKey, modulus);
+
+        if (encrypted == null) {
+            throw new IllegalArgumentException("No message to decrypt!!!");
         } else {
-            throw new NullPointerException("Null");
+            return encrypted.modPow(privateKey, modulus);
         }
 
     }

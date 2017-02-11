@@ -2,7 +2,6 @@ package com.timorpheus.task1;
 
 public class BitOperation {
 
-
     public int countByte() {
         byte number = 1;
         int i = 1;

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class Task1test {
+public class BitCountTest {
 
     @Test
     public void testCountByte() throws Exception {

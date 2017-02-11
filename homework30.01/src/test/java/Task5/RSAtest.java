@@ -22,7 +22,7 @@ public class RSAtest {
     public void setUp() throws Exception{
         rsaServer = new RSA();
         rsaClient = new RSA();
-        rsaServer.init(1024);
+
         rsaClient.setModulus(rsaServer.getModulus());
         rsaClient.setPublicKey(rsaServer.getPublicKey());
 
@@ -31,14 +31,20 @@ public class RSAtest {
         encrypted = rsaServer.encrypt(message);
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test
+    public void publicKeyTest() throws Exception{
+        assertEquals(new BigInteger(String.valueOf(65537)), rsaServer.getPublicKey());
+    }
+
+
+    @Test(expected = IllegalArgumentException.class)
     public void rsaEncryptionNullMessageTest() throws Exception {
         message = null;
         rsaServer.encrypt(message);
     }
 
 
-    @Test(expected = NullPointerException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void rsaDecryptionNullMessageTest() throws Exception{
         message = null;
         rsaServer.decrypt(message);
@@ -53,7 +59,6 @@ public class RSAtest {
 
     @Test
     public void decrypt() throws Exception {
-
         decrypted = rsaServer.decrypt(encrypted);
         assertEquals(message, decrypted);
     }

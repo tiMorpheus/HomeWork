@@ -1,16 +1,22 @@
 package Task4;
 
-import com.timorpheus.task4.Evklid;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
 import static com.timorpheus.task4.Evklid.gcd;
+import static org.junit.Assert.assertEquals;
 
-public class Task4test {
+public class EvklidTest {
 
     @Test
     public void equalsValues() throws Exception{
         assertEquals(3, gcd(3,3));
+    }
+    
+    @Test
+    public void maxValueTest() throws Exception{
+        assertEquals(Integer.MAX_VALUE, gcd(Integer.MAX_VALUE, Integer.MAX_VALUE));
+        assertEquals(1, gcd(Integer.MAX_VALUE,1));
+        assertEquals(1, gcd(1, Integer.MAX_VALUE));
     }
 
     @Test
@@ -18,8 +24,6 @@ public class Task4test {
         assertEquals(0, gcd(0, 0));
         assertEquals(5, gcd(0, -5));
         assertEquals(5, gcd(-5, 0));
-        assertEquals(10, gcd(0, 10));
-        assertEquals(10, gcd(10, 0));
     }
 
     @Test
@@ -30,7 +34,6 @@ public class Task4test {
         assertEquals(5, gcd(5, -5));
 
     }
-
 
     @Test
     public void nodTest() throws Exception {
