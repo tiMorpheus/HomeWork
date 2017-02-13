@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.timorpheus.task7</OriginalElement>
+  <nodes>
+    <node x="-204.0" y="159.0">com.timorpheus.task7.City</node>
+    <node x="-140.0" y="-51.0">com.timorpheus.task7.Country</node>
+    <node x="-97.0" y="52.0">com.timorpheus.task7.District</node>
+    <node x="99.0" y="80.0">com.timorpheus.task7.Area</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.timorpheus.task7.District" target="com.timorpheus.task7.City">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.timorpheus.task7.Country" target="com.timorpheus.task7.Area">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.timorpheus.task7.Area" target="com.timorpheus.task7.City">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.timorpheus.task7.Area" target="com.timorpheus.task7.District">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.timorpheus.task7.Country" target="com.timorpheus.task7.City">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="85.5" y="69.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -27,6 +27,7 @@ public class Triangle extends Shape {
     }
 
     public Triangle(double side1, double side2, double side3) {
+
         this.setSide1(side1);
         this.setSide2(side2);
         this.setSide3(side3);

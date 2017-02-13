@@ -15,7 +15,7 @@ public final class Karatsuba {
 
         int n = Math.max(i.bitLength(), j.bitLength());
 
-        if (n <= 5) {
+        if (n <= 10) {
             return i.multiply(j);
         } else {
             n = n / 2 + n % 2;

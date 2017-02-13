@@ -1,5 +1,5 @@
 projectKey=groupId:homework2_12.02
 serverUrl=http://localhost:9000
 dashboardUrl=http://localhost:9000/dashboard/index/groupId:homework2_12.02
-ceTaskId=AVozvNcRr9AOpkZLAzR9
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AVozvNcRr9AOpkZLAzR9
+ceTaskId=AVo5gk5ZxMd7PC8Qe3C7
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVo5gk5ZxMd7PC8Qe3C7
