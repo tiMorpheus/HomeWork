@@ -7,7 +7,7 @@ public class City {
 
     public City(String title, int population) {
         this.title = title;
-        this.population = population;
+        this.setPopulation(population);
     }
 
     public String getTitle() {
@@ -15,6 +15,10 @@ public class City {
     }
 
     public void setPopulation(int population) {
+        if (population <= 0){
+            throw new IllegalArgumentException();
+        }
+
         this.population = population;
     }
 
