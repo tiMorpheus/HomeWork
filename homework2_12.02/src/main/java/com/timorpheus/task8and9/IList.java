@@ -24,14 +24,6 @@ public interface IList<E> {
      */
     void add(int index, E element);
 
-    /**
-     * Removes the first occurrence of the specified element from this list,
-     * if it is present (optional operation).  If this list does not contain
-     * the element, it is unchanged
-     *
-     * @param element element to be removed from this list, if present
-     */
-    void remove(E element);
 
     /**
      * Removes the element at the specified position in this list (optional
@@ -61,18 +53,6 @@ public interface IList<E> {
      */
     E set(int index, E element);
 
-    /**
-     * Returns the index of the first occurrence of the specified element
-     * in this list, or -1 if this list does not contain the element.
-     * More formally, returns the lowest index <tt>i</tt> such that
-     * <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))</tt>,
-     * or -1 if there is no such index.
-     *
-     * @param element element to search for
-     * @return the index of the first occurrence of the specified element in
-     * this list, or -1 if this list does not contain the element
-     */
-    int indexOf(E element);
 
     /**
      * Removes all of the elements from this list (optional operation).
@@ -106,5 +86,15 @@ public interface IList<E> {
      * @return <tt>true</tt> if this list contains the specified element
      */
     boolean contains(E element);
+
+    /**
+     * Returns the index of the first occurrence of the specified element
+     * in this list, or -1 if this list does not contain the element.
+     *
+     * @param element element to search for
+     * @return the index of the first occurrence of the specified element in
+     *         this list, or -1 if this list does not contain the element
+     */
+    int indexOf(E element);
 
 }
