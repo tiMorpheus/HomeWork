@@ -15,10 +15,6 @@ public class MySingleList<E> implements IList<E> {
             this.data = data;
         }
 
-        Node(Node head, E data) {
-            head.next = this;
-            this.data = data;
-        }
 
         @Override
         public String toString() {
@@ -46,6 +42,7 @@ public class MySingleList<E> implements IList<E> {
         }
         size++;
     }
+
 
     @Override
     public void add(int index, E element) {
