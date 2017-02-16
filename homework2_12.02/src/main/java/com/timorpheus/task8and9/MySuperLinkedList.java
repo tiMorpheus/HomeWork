@@ -2,7 +2,6 @@ package com.timorpheus.task8and9;
 
 
 import java.util.Collection;
-import java.util.ConcurrentModificationException;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
@@ -33,7 +32,7 @@ public class MySuperLinkedList<E> implements IList<E> {
     public void add(int index, E element) {
         checkPositionIndex(index);
 
-        if(index == size){
+        if (index == size) {
             linkLast(element);
         } else {
             linkBefore(element, node(index));
@@ -157,6 +156,7 @@ public class MySuperLinkedList<E> implements IList<E> {
         }
         return true;
     }
+
     @Override
     public boolean contains(E element) {
         return indexOf(element) != -1;
@@ -466,7 +466,7 @@ public class MySuperLinkedList<E> implements IList<E> {
 
         @Override
         public void remove() {
-
+            
         }
 
         @Override
@@ -478,6 +478,7 @@ public class MySuperLinkedList<E> implements IList<E> {
         public void add(E e) {
 
         }
+
 
     }
 

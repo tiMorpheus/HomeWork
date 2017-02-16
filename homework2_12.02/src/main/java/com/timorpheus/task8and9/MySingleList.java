@@ -7,27 +7,15 @@ import java.util.NoSuchElementException;
 public class MySingleList<E> implements IList<E> {
 
     private Node head;
-    private Node tail;
     private int size;
 
     public MySingleList() {
         size = 0;
     }
 
-
     @Override
     public void add(E element) {
-
-        Node<E> nodeToAdd = new Node<>(element);
-
-        if (tail == null) {
-            head = nodeToAdd;
-            tail = nodeToAdd;
-        } else {
-            tail.next = nodeToAdd;
-            tail = nodeToAdd;
-        }
-        size++;
+        add(size(), element);
     }
 
 
@@ -46,8 +34,8 @@ public class MySingleList<E> implements IList<E> {
             pre.next = newNode;
             newNode.next = current;
         }
-        size++;
 
+        size++;
     }
 
     @Override
@@ -59,7 +47,7 @@ public class MySingleList<E> implements IList<E> {
             size--;
         } else if (index == size - 1) {
             Node<E> newTail = getNodeByIndex(index - 1);
-            tail = newTail;
+
             newTail.next = null;
             size--;
         } else {
@@ -125,7 +113,8 @@ public class MySingleList<E> implements IList<E> {
 
     @Override
     public void clear() {
-        this.head = tail.next;
+
+        this.head = getNodeByIndex(size - 1).next;
 
         size = 0;
     }
