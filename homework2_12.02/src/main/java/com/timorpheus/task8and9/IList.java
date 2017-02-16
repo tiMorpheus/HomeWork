@@ -62,28 +62,28 @@ public interface IList<E> {
 
     /**
      * Returns the number of elements in this list.  If this list contains
-     * more than <tt>Integer.MAX_VALUE</tt> elements, returns
-     * <tt>Integer.MAX_VALUE</tt>.
+     * more than Integer.MAX_VALUE elements, returns
+     * Integer.MAX_VALUE.
      *
      * @return the number of elements in this list
      */
     int size();
 
     /**
-     * Returns <tt>true</tt> if this list contains no elements.
+     * Returns true if this list contains no elements.
      *
-     * @return <tt>true</tt> if this list contains no elements
+     * @return true if this list contains no elements
      */
     boolean isEmpty();
 
     /**
-     * Returns <tt>true</tt> if this list contains the specified element.
-     * More formally, returns <tt>true</tt> if and only if this list contains
-     * at least one element <tt>e</tt> such that
-     * <tt>(o==null&nbsp;?&nbsp;e==null&nbsp;:&nbsp;o.equals(e))</tt>.
+     * Returns true if this list contains the specified element.
+     * More formally, returns true if and only if this list contains
+     * at least one element e such that
+     * <(o==null ? e==null : o.equals(e)).
      *
      * @param element element whose presence in this list is to be tested
-     * @return <tt>true</tt> if this list contains the specified element
+     * @return true if this list contains the specified element
      */
     boolean contains(E element);
 

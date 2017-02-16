@@ -1,44 +1,31 @@
 package com.timorpheus.task8and9;
 
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 public class MySingleList<E> implements IList<E> {
 
     private Node head;
     private Node tail;
     private int size;
 
-    private class Node<E> {
-        Node next;
-        E data;
-
-        Node(E data) {
-            this.data = data;
-        }
-
-
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "data=" + data +
-                    '}';
-        }
-    }
-
     public MySingleList() {
         size = 0;
     }
 
+
     @Override
     public void add(E element) {
 
-        Node<E> a = new Node<>(element);
+        Node<E> nodeToAdd = new Node<>(element);
 
         if (tail == null) {
-            head = a;
-            tail = a;
+            head = nodeToAdd;
+            tail = nodeToAdd;
         } else {
-            tail.next = a;
-            tail = a;
+            tail.next = nodeToAdd;
+            tail = nodeToAdd;
         }
         size++;
     }
@@ -125,14 +112,14 @@ public class MySingleList<E> implements IList<E> {
     @Override
     public E get(int index) {
         checkPositionIndex(index);
-        return (E) getNodeByIndex(index).data;
+        return (E) getNodeByIndex(index).element;
     }
 
     @Override
     public E set(int index, E element) {
         Node<E> node = getNodeByIndex(index);
-        E removedData = node.data;
-        node.data = element;
+        E removedData = node.element;
+        node.element = element;
         return removedData;
     }
 
@@ -166,13 +153,13 @@ public class MySingleList<E> implements IList<E> {
         int index = 0;
         if (element == null) {
             for (Node<E> x = head; x != null; x = x.next) {
-                if (x.data == null)
+                if (x.element == null)
                     return index;
                 index++;
             }
         } else {
             for (Node<E> x = head; x != null; x = x.next) {
-                if (element.equals(x.data))
+                if (element.equals(x.element))
                     return index;
                 index++;
             }
@@ -193,10 +180,55 @@ public class MySingleList<E> implements IList<E> {
         StringBuilder stringBuilder = new StringBuilder();
         Node t = head;
         while (t != null) {
-            stringBuilder.append(t.data + " ");
+            stringBuilder.append(t.element + " ");
             t = t.next;
         }
+
         return stringBuilder.toString();
+    }
+
+    public Iterator<E> iterator() {
+        return new Itr(head);
+    }
+
+    private class Itr<E> implements Iterator<E> {
+        private Node<E> current = head;
+
+        public Itr(Node<E> head) {
+            this.current = head;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public E next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            E element = current.element;
+            current = current.next;
+            return element;
+        }
+    }
+
+    private class Node<E> {
+        Node next;
+        E element;
+
+        Node(E element) {
+            this.element = element;
+        }
+
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "element=" + element +
+                    '}';
+        }
     }
 
 }

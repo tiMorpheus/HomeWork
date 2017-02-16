@@ -1,18 +1,23 @@
 package task8;
 
+import com.timorpheus.task8and9.IList;
 import com.timorpheus.task8and9.MySingleList;
+import com.timorpheus.task8and9.MySuperLinkedList;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
+
+import java.util.Iterator;
 
 import static org.junit.Assert.assertEquals;
 
 public class SingleListTest {
 
-    MySingleList<Integer> list;
+    IList<Integer> list;
 
     @Before
     public void init() {
-        list = new MySingleList<>();
+        list = new MySuperLinkedList<>();
     }
 
     @Test
