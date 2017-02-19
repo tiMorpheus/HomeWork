@@ -2,11 +2,11 @@ package com.timorpheus.oop.ingridients.impl;
 
 import com.timorpheus.oop.ingridients.Sauce;
 
-public class SuperRedHotChilliPepperSouce extends Sauce {
+public class SuperRedHotChiliPepperSouce extends Sauce {
 
     String name = "Red hot chili sauce";
 
-    public SuperRedHotChilliPepperSouce(boolean isHot, float calories) {
+    public SuperRedHotChiliPepperSouce(boolean isHot, float calories) {
         super(isHot, calories);
     }
 

@@ -31,6 +31,9 @@ public class Country {
     }
 
     public void addAreas(Area... area) {
+        if (area == null){
+            throw new IllegalArgumentException();
+        }
 
         for (Area a : area) {
             areas.add(a);

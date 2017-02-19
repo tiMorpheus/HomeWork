@@ -27,6 +27,9 @@ public class District {
     }
 
     public void addCity(City city) {
+        if (city == null){
+            throw new IllegalArgumentException();
+        }
         cities.add(city);
     }
 }

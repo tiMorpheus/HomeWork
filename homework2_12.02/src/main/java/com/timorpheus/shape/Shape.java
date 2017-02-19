@@ -8,7 +8,6 @@ public abstract class Shape {
 
     public double getPerimeter() {
 
-        this.calculatePerimeter();
         return this.perimeter;
     }
 

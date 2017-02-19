@@ -30,10 +30,16 @@ public class Area {
     }
 
     public void setCenterCity(City centerCity) {
+        if (centerCity == null){
+            throw new IllegalArgumentException();
+        }
         this.centerCity = centerCity;
     }
 
     public void addDistrict(District district) {
+        if (district == null){
+            throw new IllegalArgumentException();
+        }
         this.districts.add(district);
     }
 

@@ -1,13 +1,16 @@
 package com.timorpheus.task8and9;
 
 
+import java.util.ConcurrentModificationException;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
-public class MySingleList<E> implements IList<E> {
+public class MySingleList<E> implements IList<E>, Iterable<E> {
 
     private Node head;
     private int size;
+    protected int modificationCount = 0;
 
     public MySingleList() {
         size = 0;
@@ -34,7 +37,7 @@ public class MySingleList<E> implements IList<E> {
             pre.next = newNode;
             newNode.next = current;
         }
-
+        modificationCount++;
         size++;
     }
 
@@ -44,11 +47,15 @@ public class MySingleList<E> implements IList<E> {
 
         if (index == 0) {
             head = head.next;
+            modificationCount++;
+
             size--;
         } else if (index == size - 1) {
             Node<E> newTail = getNodeByIndex(index - 1);
 
             newTail.next = null;
+            modificationCount++;
+
             size--;
         } else {
 
@@ -57,9 +64,9 @@ public class MySingleList<E> implements IList<E> {
             Node<E> after = removed.next;
 
             prev.next = after;
+            modificationCount++;
             size--;
         }
-
     }
 
     /**
@@ -108,6 +115,7 @@ public class MySingleList<E> implements IList<E> {
         Node<E> node = getNodeByIndex(index);
         E removedData = node.element;
         node.element = element;
+        modificationCount++;
         return removedData;
     }
 
@@ -116,6 +124,7 @@ public class MySingleList<E> implements IList<E> {
 
         this.head = getNodeByIndex(size - 1).next;
 
+        modificationCount++;
         size = 0;
     }
 
@@ -176,12 +185,14 @@ public class MySingleList<E> implements IList<E> {
         return stringBuilder.toString();
     }
 
+
     public Iterator<E> iterator() {
         return new Itr(head);
     }
 
     private class Itr<E> implements Iterator<E> {
         private Node<E> current = head;
+        private int expectedModificationCount = modificationCount;
 
         public Itr(Node<E> head) {
             this.current = head;
@@ -194,12 +205,18 @@ public class MySingleList<E> implements IList<E> {
 
         @Override
         public E next() {
+            checkForComodification();
             if (!hasNext()) {
                 throw new NoSuchElementException();
             }
             E element = current.element;
             current = current.next;
             return element;
+        }
+
+        final void checkForComodification() {
+            if (modificationCount != expectedModificationCount)
+                throw new ConcurrentModificationException();
         }
     }
 

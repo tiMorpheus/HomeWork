@@ -51,8 +51,56 @@ public class City {
 
         public Street(String title, int numberOfBuildings, double lengthOfStreet, StreetType streetType) {
             this.title = title;
+            this.setNumberOfBuildings(numberOfBuildings);
+            this.setLengthOfStreet(lengthOfStreet);
+            this.streetType = streetType;
+        }
+
+
+        public double clearStreet(){
+
+            double i = 0.0;
+            for (; i <= lengthOfStreet; i++){
+                System.out.println("clear street " + this.title + " on " + i + " meter" );
+            }
+            return i;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public int getNumberOfBuildings() {
+            return numberOfBuildings;
+        }
+
+        public void setNumberOfBuildings(int numberOfBuildings) {
+            if( numberOfBuildings < 0){
+                throw new IllegalArgumentException();
+            }
             this.numberOfBuildings = numberOfBuildings;
+        }
+
+        public double getLengthOfStreet() {
+            return lengthOfStreet;
+        }
+
+        public void setLengthOfStreet(double lengthOfStreet) {
+            if( lengthOfStreet < 0){
+                throw new IllegalArgumentException();
+            }
             this.lengthOfStreet = lengthOfStreet;
+        }
+
+        public StreetType getStreetType() {
+            return streetType;
+        }
+
+        public void setStreetType(StreetType streetType) {
             this.streetType = streetType;
         }
 

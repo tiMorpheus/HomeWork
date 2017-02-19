@@ -2,6 +2,9 @@ package task8;
 
 import org.junit.Test;
 
+import java.util.ConcurrentModificationException;
+import java.util.Iterator;
+
 import static org.junit.Assert.assertEquals;
 
 public class ExceptionsTest extends SingleListTest {
@@ -56,6 +59,23 @@ public class ExceptionsTest extends SingleListTest {
         list.add(20);
         list.add(30);
         assertEquals(false, list.contains(null));
+    }
+
+    @Test(expected = ConcurrentModificationException.class)
+    public void iteratorTest(){
+
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+
+        Iterator<Integer> iterator = list.iterator();
+
+        for (Integer a : list){
+            System.out.println(a);
+            list.add(1,2);
+        }
     }
 
 }

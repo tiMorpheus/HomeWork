@@ -1,6 +1,8 @@
 package com.timorpheus.task8and9;
 
 
+import java.util.Iterator;
+
 public interface IList<E> {
 
 
@@ -96,5 +98,6 @@ public interface IList<E> {
      *         this list, or -1 if this list does not contain the element
      */
     int indexOf(E element);
+
 
 }

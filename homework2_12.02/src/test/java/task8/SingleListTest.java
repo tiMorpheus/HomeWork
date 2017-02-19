@@ -4,21 +4,25 @@ import com.timorpheus.task8and9.IList;
 import com.timorpheus.task8and9.MySingleList;
 import com.timorpheus.task8and9.MySuperLinkedList;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 
+import java.util.ConcurrentModificationException;
+import java.util.Iterator;
 
 import static org.junit.Assert.assertEquals;
 
 public class SingleListTest {
 
-    public IList<Integer> list;
+    public MySingleList<Integer> list;
+//    public MySuperLinkedList<Integer> list;
 
     @Before
     public void init() {
         list = new MySingleList<>();
 
-        list = new MySuperLinkedList();
+//        list = new MySuperLinkedList();
     }
 
     @Test
@@ -165,7 +169,5 @@ public class SingleListTest {
         list.add(0, -1);
         assertEquals("-1 1 2 3 10 ", list.toString());
     }
-
-
 
 }

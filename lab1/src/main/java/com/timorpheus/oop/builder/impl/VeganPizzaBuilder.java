@@ -3,7 +3,7 @@ package com.timorpheus.oop.builder.impl;
 import com.timorpheus.oop.builder.PizzaBuilder;
 import com.timorpheus.oop.ingridients.impl.BigDough;
 import com.timorpheus.oop.ingridients.impl.Chedder;
-import com.timorpheus.oop.ingridients.impl.SuperRedHotChilliPepperSouce;
+import com.timorpheus.oop.ingridients.impl.SuperRedHotChiliPepperSouce;
 
 public class VeganPizzaBuilder extends PizzaBuilder {
 
@@ -12,7 +12,7 @@ public class VeganPizzaBuilder extends PizzaBuilder {
         System.out.println("Preparing vegan pizza...");
         pizza.setDough(new BigDough(100, 10));
         pizza.setCheese(new Chedder(100));
-        pizza.setSauce(new SuperRedHotChilliPepperSouce(true, 130));
+        pizza.setSauce(new SuperRedHotChiliPepperSouce(true, 130));
 
     }
 

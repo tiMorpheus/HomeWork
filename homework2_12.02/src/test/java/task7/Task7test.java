@@ -46,11 +46,6 @@ public class Task7test {
 
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void negativeValueOfPopulationTest(){
-        City noName = new City("Noname", -1000);
-    }
-
     @Test
     public void printCapitalTest() {
         country.printCapital();
@@ -68,4 +63,5 @@ public class Task7test {
         country.printSquare();
         assertEquals(320_000,country.calculateSquare(),1);
     }
+
 }
