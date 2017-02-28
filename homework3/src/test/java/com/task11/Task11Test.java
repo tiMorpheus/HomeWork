@@ -1,4 +1,4 @@
-package com;
+package com.task11;
 
 import com.timorpheus.task11.PhantomFactory;
 import org.junit.Before;

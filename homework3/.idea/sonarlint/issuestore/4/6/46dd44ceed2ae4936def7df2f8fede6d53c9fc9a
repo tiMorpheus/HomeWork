@@ -1,9 +1,0 @@
-
-V
-squid:S106";Replace this usage of System.out or System.err by a logger.(ÏÅ¥8óŞ¾º¥+
-Rsquid:S2696"6Make the enclosing method "static" or remove this set.( §8çê¤º¥+
-„"squid:ClassVariableVisibilityCheck"QMake queue a static final constant or non-public and provide accessors if needed.(ĞØĞ¦8ğ¥Ü¸¥+
-Gsquid:S1444"+Make this "public static queue" field final(ĞØĞ¦8ğ¥Ü¸¥+
-Qsquid:S2209"5Change this instance-reference to a static reference.(–ÑøŠ8¿á•¹¥+
-\squid:S1213";Move this constructor to comply with Java Code Conventions.(Äïœ”ûÿÿÿÿ8ù¡¥»¥+
-Wsquid:S2696"6Make the enclosing method "static" or remove this set.(ëæûÿÿÿÿÿ8Õ–•¹¥+
