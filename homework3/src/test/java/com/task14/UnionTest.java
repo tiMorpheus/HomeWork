@@ -52,13 +52,9 @@ public class UnionTest {
 
         List<Integer> result = (List<Integer>) ListUnion.getUnion(list1, list2, comparator);
 
-        for(Integer i : result){
+        for (Integer i : result) {
             System.out.println(i);
         }
-    }
-    @Test(expected = IllegalArgumentException.class)
-    public void nullComparatorTest() {
-        List<Integer> result = (List<Integer>) ListUnion.getUnion(list2, list1, null);
     }
 
 }

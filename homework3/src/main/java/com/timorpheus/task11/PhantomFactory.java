@@ -19,16 +19,17 @@ public class PhantomFactory {
     }
 
     public A loadA(int a) throws InterruptedException {
+
         while (true) {
+
             if (count < capacity) {
 
                 A pa = new A(a);
                 wrapA(pa);
                 return pa;
             } else {
-                Reference<A> reference = (Reference<A>) queue.remove(100);
+                Reference<A> reference = (Reference<A>) queue.poll();
                 if (reference != null) {
-                    System.out.println("remove old object");
                     count--;
                 }
             }
