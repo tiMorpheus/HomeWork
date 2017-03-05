@@ -1,0 +1,5 @@
+projectKey=groupId:lab2
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/groupId:lab2
+ceTaskId=AVqgP_rQBu36gPnFk2J2
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVqgP_rQBu36gPnFk2J2
