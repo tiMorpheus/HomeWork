@@ -116,7 +116,7 @@ public class MyPriorityQueue<E> {
      */
     private void siftDown(int k, E x) {
 
-        int half = size >>> 1;
+        int half = size >> 1;
 
         while (k < half) {
 

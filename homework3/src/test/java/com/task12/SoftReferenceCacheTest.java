@@ -30,7 +30,7 @@ public class SoftReferenceCacheTest {
     }
 
     @Test
-    public void putSoftFile() throws IOException {
+    public void getSoftFile() throws IOException {
         softCache.getFile(locations.get(0));
         softCache.getFile(locations.get(1));
         softCache.getFile(locations.get(2));

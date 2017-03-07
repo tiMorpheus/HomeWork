@@ -16,13 +16,13 @@ import java.util.List;
 
 public class Testing {
 
-    static List<Sentence> sentences;
+    List<Sentence> sentences;
     Task1 task1;
     Task2 task2;
 
     @Before
     public void setUp() throws IOException {
-        String text = MyReader.readFile("D:\\Text.txt");
+        String text = MyReader.readFile("C:\\Text.txt");
 
         sentences = Parser.parse(text);
 

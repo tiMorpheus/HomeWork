@@ -1,8 +1,0 @@
-
-Rsquid:S2696"6Make the enclosing method "static" or remove this set.(‘Ş¹­8 Ÿˆª+
-Qsquid:S2209"5Change this instance-reference to a static reference.(ãÃØã8ºı–ú©+
-Rsquid:S2696"6Make the enclosing method "static" or remove this set.(±ğ…‰8 Ÿˆª+
-tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(¦Øøáüÿÿÿÿ8ì¾“ú©+
-[
-squid:S106";Replace this usage of System.out or System.err by a logger.(“‚ĞÏıÿÿÿÿ8¦îšª+
-Rsquid:S2696"6Make the enclosing method "static" or remove this set.(ãÃØã8ºı–ú©+

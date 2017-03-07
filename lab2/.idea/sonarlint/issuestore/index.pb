@@ -1,23 +1,3 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-^
-.src\main\java\timur\entity\PartOfSentence.java,4\c\4c2db68d6b0a0bdfb12138401829041074e3965a
-V
-&src\main\java\timur\entity\MyChar.java,5\1\51053a55819bf78b950ad86508bb05d2754a4ab4
-[
-+src\main\java\timur\entity\Punctuation.java,2\c\2c2fe8761209ee9854105196554c1a3b499ad911
-O
-src\test\java\lab2\Testing.java,b\a\bad5f8f3fb1377058772c3e72b11bd0a5a274380
-X
-(src\main\java\timur\entity\Sentence.java,9\8\98d45bbc5f2912d1b97894dc35c8d1641d7699df
-T
-$src\main\java\timur\entity\Word.java,8\8\880a35c0a66073e95c91bad009937c5a1d00e7b5
-U
-%src\main\java\timur\logic\Parser.java,c\e\ce9f383826e32c744d85eb24bb1b5d7e4292c4e1
-X
-(src\main\java\timur\reader\MyReader.java,6\a\6a856541adb2827dc1dfe83403f3458355606de4
-T
-$src\main\java\timur\logic\Task2.java,8\4\846e3bac898a28cc9ecb03c014dc6689daf8e63c
-T
-$src\main\java\timur\logic\Task1.java,2\c\2cfe106c52f45c1e1d80f0f6fd595471db162a6e

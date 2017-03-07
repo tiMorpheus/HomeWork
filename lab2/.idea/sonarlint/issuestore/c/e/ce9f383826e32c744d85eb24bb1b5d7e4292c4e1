@@ -1,7 +1,0 @@
-
-[squid:S1118":Add a private constructor to hide the implicit public one.(ãòÙÂøÿÿÿÿ8¤Èúª+
-n
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(Û£‘’ÿÿÿÿÿ8¤Èúª+
-y
-squid:S135"YReduce the total number of break and continue statements in this loop to use at most one.(¶Ç½Åøÿÿÿÿ8¤Èúª+
-…squid:S1151"iReduce this switch case number of lines from 8 to at most 5, for example by extracting code into methods.(åşùö8¤Èúª+
