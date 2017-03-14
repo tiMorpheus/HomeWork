@@ -1,78 +1,0 @@
-
-lsquid:S00116"QRename this field "AI_WON" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ¨Ï¾üÿÿÿÿ
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–ÁÃ
-]squid:S2583"CChange this condition so that it does not always evaluate to "true"(äŸý®þÿÿÿÿ
-;squid:S1170"!Make this final field static too.(«•ì‡ÿÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ù¸ª‹ÿÿÿÿÿ
-osquid:S00122"TAt most one statement is allowed per line, but 3 statements were found on this line.(ŠÛç¾ÿÿÿÿÿ
-ssquid:S00116"]Rename this field "MOUSE_BUTTON_RIGHT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÔ¥¸
-6squid:S1170"!Make this final field static too.(­‡’¯
-;squid:S1170"!Make this final field static too.(í€ºÛùÿÿÿÿ
-b
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ü¢Ïâ
-rsquid:S00116"\Rename this field "MOUSE_BUTTON_LEFT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ‡ó 
-nsquid:S00116"XRename this field "BTN_EXIT_GAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­‡’¯
-jsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(á¹¨Ô
-osquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(Úãô¼ýÿÿÿÿ
-osquid:S00122"TAt most one statement is allowed per line, but 3 statements were found on this line.(ŸÍ¬„þÿÿÿÿ
-jsquid:S00116"TRename this field "WINDOW_DX" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ñ§é
-Usquid:S1213";Move this constructor to comply with Java Code Conventions.(ÍØ¡¨øÿÿÿÿ
-9squid:S1659"Declare "y" on a separate line.(¡Ê²‘þÿÿÿÿ
-6squid:S1170"!Make this final field static too.(ùÔ¥¸
-hsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Ó²üÿÿÿÿ
-6squid:S1170"!Make this final field static too.(ÙÝßß
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Á˜¡¶ýÿÿÿÿ
-osquid:S00122"TAt most one statement is allowed per line, but 3 statements were found on this line.(Ë¼Ûêûÿÿÿÿ
-6squid:S1170"!Make this final field static too.(íçÛð
-;squid:S1170"!Make this final field static too.(–Ãìæûÿÿÿÿ
-N
-squid:S106";Replace this usage of System.out or System.err by a logger.(±‡£L
-jsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ü¼…
-9squid:S1659"Declare "y" on a separate line.(¡Ê²‘þÿÿÿÿ
-6squid:S1170"!Make this final field static too.(ÿ‡ó 
-jsquid:S00122"TAt most one statement is allowed per line, but 3 statements were found on this line.(Ó‹÷þ
-;squid:S1170"!Make this final field static too.(–þéùÿÿÿÿ
-isquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(©ãŽ
-jsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(¥¥Õë
-9squid:S1659"Declare "y" on a separate line.(¡Ê²‘þÿÿÿÿ
-;squid:S1170"!Make this final field static too.(Œøï³þÿÿÿÿ
-osquid:S00122"TAt most one statement is allowed per line, but 3 statements were found on this line.(Àø¬ûÿÿÿÿ
-?squid:S1659"%Declare "aiShips" on a separate line.(«Â¾ßþÿÿÿÿ
-;squid:S1948"&Make "game" transient or serializable.(áö²ò
-jsquid:S00116"TRename this field "CELL_SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º»Â
-osquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(íóüþøÿÿÿÿ
-tsquid:S00116"YRename this field "BTN_SHOW_ENEMY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í€ºÛùÿÿÿÿ
-jsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ü¢Ïâ
-6squid:S1170"!Make this final field static too.(§ñ§é
-;squid:S1170"!Make this final field static too.(ë®¡ýÿÿÿÿ
-Dsquid:S1066"/Merge this if statement with the enclosing one.(ÖÃæë
-rsquid:S00116"WRename this field "BTN_NEW_GAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«•ì‡ÿÿÿÿÿ
-osquid:S00122"TAt most one statement is allowed per line, but 3 statements were found on this line.(í¾ôüÿÿÿÿ
-)squid:S1700"Rename field "shots"(æ’¿„
-tsquid:S00116"YRename this field "START_LOCATION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÿÅûøÿÿÿÿ
-O
-squid:S106";Replace this usage of System.out or System.err by a logger.(•ßð
-)squid:S1700"Rename field "ships"(ªóÐ…
-usquid:S00116"ZRename this field "NUMBER_OF_CELLS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë®¡ýÿÿÿÿ
-;squid:S1170"!Make this final field static too.(ƒ¨Ï¾üÿÿÿÿ
-osquid:S00122"TAt most one statement is allowed per line, but 3 statements were found on this line.(¸Ð€éÿÿÿÿÿ
--squid:S1700"Rename field "shot"(îåÃŸúÿÿÿÿ
-rsquid:S00116"\Rename this field "TITLE_OF_AI_FIELD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÝßß
-6squid:S1170"!Make this final field static too.(º»Â
-@squid:S1659"&Declare "gameOver" on a separate line.(ü”’–øÿÿÿÿ
-Psquid:S1147";Remove this call to "exit" or ensure it is really required.(¯žá
-6squid:S1170"!Make this final field static too.(›ïÀ´
-;squid:S1170"!Make this final field static too.(»ùÚðúÿÿÿÿ
-qsquid:S00116"VRename this field "WINDOW_SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œøï³þÿÿÿÿ
-g
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(•†±Ìÿÿÿÿÿ
-jsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ØŠ½ô
-osquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(‚ÕÖûÿÿÿÿ
-qsquid:S00116"VRename this field "BTN_SHOW_MY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ùÚðúÿÿÿÿ
-jsquid:S00122"TAt most one statement is allowed per line, but 3 statements were found on this line.(¹¶¾¢
-hsquid:S00116"RRename this field "YOU_WON" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íçÛð
-osquid:S00116"TRename this field "WINDOW_DY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–Ãìæûÿÿÿÿ
-;squid:S1170"!Make this final field static too.( ÿÅûøÿÿÿÿ
-?squid:S1659"%Declare "aiShots" on a separate line.(¸®Ø›üÿÿÿÿ
-zsquid:S00116"_Rename this field "TITLE_OF_HUMAN_FIELD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–þéùÿÿÿÿ
-qsquid:S00116"[Rename this field "TITLE_OF_PROGRAM" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ïÀ´

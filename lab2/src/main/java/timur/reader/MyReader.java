@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class MyReader {
 
     public final static Logger LOGGER = Logger.getLogger(MyReader.class);
-    private static Scanner input;
 
     public static String readFile(String filepath){
         LOGGER.info("Trying to get filename: " + filepath);

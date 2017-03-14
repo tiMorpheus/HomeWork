@@ -6,7 +6,7 @@
     <appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
         <param name="Encoding" value="Cp1251"/>
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="[%-5p] %d{ISO8601} [%-5.10t][%20.32c] - %m%n" />
+            <param name="ConversionPattern" value="[%-5p] [%-5.10t][%10.32c] - %m%n" />
         </layout>
     </appender>
 

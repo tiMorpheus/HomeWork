@@ -23,6 +23,7 @@ public class QueueTest {
         queue.offer(30);
         queue.offer(50);
         queue.offer(5);
+        queue.offer(15);
 
     }
 
