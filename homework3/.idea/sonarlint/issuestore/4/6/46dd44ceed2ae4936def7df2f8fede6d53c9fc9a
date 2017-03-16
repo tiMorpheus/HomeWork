@@ -1,8 +1,0 @@
-
-isquid:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“
-Vsquid:UselessImportCheck"4Remove this unused import 'java.lang.ref.Reference'.(¸³À›
-Rsquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
-Rsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
-[squid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-Vsquid:UselessImportCheck"4Remove this unused import 'java.lang.reflect.Field'.(„‡Áú

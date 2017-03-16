@@ -15,6 +15,7 @@ public class MyReader {
     public static String readFile(String filepath){
         LOGGER.info("Trying to get filename: " + filepath);
 
+
         String result = "";
 
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(filepath)))){
