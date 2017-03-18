@@ -7,5 +7,5 @@ public class Bacterium {
     public Bacterium(Form bacteriumForm) {
         this.bacteriumForm = bacteriumForm;
     }
-    
+
 }

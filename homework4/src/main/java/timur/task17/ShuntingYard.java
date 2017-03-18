@@ -29,11 +29,12 @@ public class ShuntingYard {
     }
 
 
-    public static String postfix(String infix) {
+    public static String getPolishView(String infix) {
         StringBuilder output = new StringBuilder();
         Deque<String> stack = new LinkedList<>();
 
         for (String token : infix.split("\\s")) {
+
             // operator
             if (ops.containsKey(token)) {
                 while (!stack.isEmpty() && isHigerPrec(token, stack.peek()))

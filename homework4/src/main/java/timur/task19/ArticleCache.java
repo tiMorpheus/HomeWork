@@ -9,6 +9,7 @@ public class ArticleCache {
 
 
     public Article getArticle(String theme) throws CloneNotSupportedException {
+
         Article article = null;
         if (cache.get(theme) != null) {
             article = cache.get(theme).clone();

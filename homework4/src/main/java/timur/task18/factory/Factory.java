@@ -5,6 +5,7 @@ import timur.task18.enums.Factories;
 public class Factory {
 
     public static CinemaFactory getFactory(Factories factory){
+
         switch (factory){
             case SPIDERMAN_FACTORY:
                 return SpidermanFactory.getInstance();

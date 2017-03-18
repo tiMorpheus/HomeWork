@@ -1,23 +1,12 @@
 package timur.task21.entity;
 
-import timur.task21.Hero;
-import timur.task21.MoveType;
+import timur.task21.strategy.WalkStrategy;
 
-public class Orc extends Character implements Hero {
+public class Orc extends Character {
 
 
-    public Orc(String name) {
-        super(name);
+    public Orc(String name, WalkStrategy walkStrategy) {
+        super(name, walkStrategy);
     }
 
-    @Override
-    public String move(MoveType moveType) {
-        switch (moveType){
-
-            case WALK:
-                return "Orc "+ this.getName() + " is walking...";
-            default:
-                return "Orc's cannot do this move: " + moveType.toString();
-        }
-    }
 }

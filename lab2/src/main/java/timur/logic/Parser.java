@@ -14,6 +14,7 @@ public class Parser {
     public final static Logger LOGGER = Logger.getLogger(Parser.class);
 
     public static List<Sentence> parse(String text) {
+
         List<Sentence> sentences = new ArrayList<>();
         List<PartOfSentence> parts = new ArrayList<>();
         StringTokenizer st = new StringTokenizer(text, " \t\n\r:;.!?,/\\|\"\'",
@@ -23,9 +24,11 @@ public class Parser {
             String s = st.nextToken().trim();
             int size = s.length();
 
+            // ""
             if (size < 1)
                 continue;
 
+            // check for punctuation or word
             if (size == 1) {
                 switch (s.charAt(0)) {
                     case ' ':
@@ -44,7 +47,7 @@ public class Parser {
                         Sentence buf = new Sentence(parts);
                         if (buf.getWords().size() != 0) {
                             sentences.add(buf);
-                            parts = new ArrayList<PartOfSentence>();
+                            parts = new ArrayList<>();
                         } else
                             parts.add(new Punctuation(s.charAt(0)));
                         break;

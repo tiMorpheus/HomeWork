@@ -1,26 +1,11 @@
 package timur.task21.entity;
 
-import timur.task21.Hero;
-import timur.task21.MoveType;
+import timur.task21.strategy.WalkAndFlyStrategy;
 
-public class Pegasus extends Character implements Hero{
+public class Pegasus extends Character {
 
-    public Pegasus(String name) {
-        super(name);
+    public Pegasus(String name, WalkAndFlyStrategy walkAndFlyStrategy) {
+        super(name, walkAndFlyStrategy);
     }
 
-    @Override
-    public String move(MoveType moveType) {
-        switch (moveType){
-
-            case WALK:
-                return "Pegasus "+ this.getName() + " is walking...";
-            case FLY:
-                return "Pegasus "+ this.getName() + " is flying...";
-            case FLY_WITH_MAGIC:
-                return "Pegasus "+ this.getName() + " is flying by magic...";
-            default:
-                return "Pegasus's cannot do this move: " + moveType.toString();
-        }
-    }
 }

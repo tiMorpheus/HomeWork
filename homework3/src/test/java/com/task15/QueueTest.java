@@ -34,16 +34,16 @@ public class QueueTest {
 
     @Test
     public void addTest(){
-        for (int i = 0; i < 95; i++) {
+        for (int i = 0; i < 4; i++) {
                 queue.offer(i);
         }
-        assertEquals(100, queue.size());
+        assertEquals(10, queue.size());
     }
 
     @Test
     public void peekTest(){
         assertEquals(0,queue.peek());
-        assertEquals(5, queue.size());
+        assertEquals(6, queue.size());
 
     }
 

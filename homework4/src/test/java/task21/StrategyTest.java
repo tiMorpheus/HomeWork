@@ -2,8 +2,6 @@ package task21;
 
 import org.junit.Before;
 import org.junit.Test;
-import timur.task21.Context;
-import timur.task21.MoveType;
 import timur.task21.entity.Elf;
 import timur.task21.entity.Harpy;
 import timur.task21.entity.Orc;
