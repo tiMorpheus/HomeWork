@@ -9,15 +9,10 @@ public class Word implements PartOfSentence, Comparable<Word> {
     private List<MyChar> chars;
     private boolean flag;
 
-    public Word(char[] w) {
-        chars = new ArrayList<>();
-
-        for (char c : w){
-            chars.add(new MyChar(c));
-        }
-
-        flag = true;
+    public Word(List<MyChar> chars) {
+        this.chars = chars;
     }
+
 
     public long getId() {
 

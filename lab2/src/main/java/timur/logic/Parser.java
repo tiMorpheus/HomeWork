@@ -1,68 +1,86 @@
 package timur.logic;
 
 import org.apache.log4j.Logger;
-import timur.entity.PartOfSentence;
-import timur.entity.Punctuation;
-import timur.entity.Sentence;
-import timur.entity.Word;
+import timur.entity.*;
+import timur.reader.MyReader;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Parser {
-    public final static Logger LOGGER = Logger.getLogger(Parser.class);
 
-    public static List<Sentence> parse(String text) {
+
+    public static List<Sentence> parse(String text){
+
+        List<String> strings = parseToSentence(text);
 
         List<Sentence> sentences = new ArrayList<>();
-        List<PartOfSentence> parts = new ArrayList<>();
-        StringTokenizer st = new StringTokenizer(text, " \t\n\r:;.!?,/\\|\"\'",
-                true);
 
-        while (st.hasMoreTokens()) {
-            String s = st.nextToken().trim();
-            int size = s.length();
+        for (String sentence: strings){
+            List<String> words = parseToWords(sentence);
+            List<PartOfSentence> partOfSentences = new ArrayList<>();
 
-            // ""
-            if (size < 1)
-                continue;
+            for (String word : words){
 
-            // check for punctuation or word
-            if (size == 1) {
-                switch (s.charAt(0)) {
-                    case ' ':
-                        continue;
-                    case ',':
-                    case ';':
-                    case ':':
-                    case '\'':
-                    case '\"':
-                        parts.add(new Punctuation(s.charAt(0)));
-                        break;
-                    case '.':
-                    case '?':
-                    case '!':
-                        parts.add(new Punctuation(s.charAt(0)));
-                        Sentence buf = new Sentence(parts);
-                        if (buf.getWords().size() != 0) {
-                            sentences.add(buf);
-                            parts = new ArrayList<>();
-                        } else
-                            parts.add(new Punctuation(s.charAt(0)));
-                        break;
-                    default:
-                        parts.add(new Word(s.toCharArray()));
+                char[] chars = parseToChars(word);
+                List<MyChar> myChars = new ArrayList<>();
+                for (char myChar: chars){
+                    if (isPunctuation(myChar)){
+                        partOfSentences.add(new Punctuation(myChar));
+                    }
+                    myChars.add(new MyChar(myChar));
                 }
 
-            } else {
-                parts.add(new Word(s.toCharArray()));
+                partOfSentences.add(new Word(myChars));
             }
-        }
-        return sentences;
 
+            sentences.add(new Sentence(partOfSentences));
+        }
+
+        return sentences;
+    }
+
+    public static List<String> parseToSentence(String text){
+        List<String> strings = new ArrayList<>();
+
+        Pattern p = Pattern.compile("[\"']?[A-Z][^.?!]+((?![.?!]['\"]?\\s[\"']?[A-Z][^.?!]).)+[.?!'\"]+");
+        Matcher m = p.matcher(text);
+        while (m.find()){
+            strings.add(m.group());
+        }
+        return strings;
     }
 
 
+    private static List<String> parseToWords(String sentence) {
 
+        if (sentence == null) {
+            throw new IllegalArgumentException();
+        }
+
+        String[] tempWords = sentence.split("\\s+");
+        return Arrays.asList(tempWords);
+    }
+
+    private static char[] parseToChars(String word){
+        if (word == null) {
+            throw new IllegalArgumentException();
+        }
+        return word.toCharArray();
+    }
+
+    public static boolean isPunctuation(char symbol) {
+        char [] punctuation = {'.' , ',' , ';' , ':', '?' , '!'};
+
+        for (int i = 0; i < punctuation.length; i++){
+            if(symbol == punctuation[i]){
+                return true;
+            }
+        }
+        return false;
+    }
 }

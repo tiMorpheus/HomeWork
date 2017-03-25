@@ -7,6 +7,9 @@ public class Sentence implements Comparable<Sentence> {
     private long id;
     private List<PartOfSentence> parts;
 
+    public Sentence() {
+    }
+
     public Sentence(List<PartOfSentence> parts) {
         this.parts = parts;
     }
